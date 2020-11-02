@@ -6,7 +6,7 @@
 /*   By: nben-ezr <nben-ezr@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/05 21:41:09 by nben-ezr      #+#    #+#                 */
-/*   Updated: 2020/10/12 21:23:15 by nben-ezr      ########   odam.nl         */
+/*   Updated: 2020/11/03 00:06:49 by nben-ezr      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,27 +17,27 @@
 void	phonebook::add_contact(void)
 {
 	std::cout << "Input first name" << std::endl;
-	std::cin >> phonebook::_first_name;
+	std::getline(std::cin >> std::ws, this->_first_name);
 	std::cout << "Input last name" << std::endl;
-	std::cin >> phonebook::_last_name;
+	std::getline(std::cin >> std::ws, this->_last_name);
 	std::cout << "Input nickname" << std::endl;
-	std::cin >> phonebook::_nickname;
+	std::getline(std::cin >> std::ws, this->_nickname);
 	std::cout << "Input login" << std::endl;
-	std::cin >> phonebook::_login;
+	std::getline(std::cin >> std::ws, this->_login);
 	std::cout << "Input postal address" << std::endl;
-	std::cin >> phonebook::_postal_address;
+	std::getline(std::cin >> std::ws, this->_postal_address);
 	std::cout << "Input email address" << std::endl;
-	std::cin >> phonebook::_email_address;
+	std::getline(std::cin >> std::ws, this->_email_address);
 	std::cout << "Input phone number" << std::endl;
-	std::cin >> phonebook::_phone_number;
+	std::getline(std::cin >> std::ws, this->_phone_number);
 	std::cout << "Input birthday date" << std::endl;
-	std::cin >> phonebook::_birthday_date;
+	std::getline(std::cin >> std::ws, this->_birthday_date);
 	std::cout << "Input favorite meal" << std::endl;
-	std::cin >> phonebook::_favorite_meal;
+	std::getline(std::cin >> std::ws, this->_favorite_meal);
 	std::cout << "Input underwear color" << std::endl;
-	std::cin >> phonebook::_underwear_color;
+	std::getline(std::cin >> std::ws, this->_underwear_color);
 	std::cout << "Input darkest secret" << std::endl;
-	std::cin >> phonebook::_darkest_secret;
+	std::getline(std::cin >> std::ws, this->_darkest_secret);
 	return ;
 }
 
@@ -46,9 +46,6 @@ std::string	phonebook::format_str(std::string str)
 	if (str.length() > 9)
 	{
 		str.resize(9);
-	}
-	if (str.length() == 9)
-	{
 		str += '.';
 	}
 	return(str);
@@ -80,11 +77,13 @@ void		phonebook::search_contact(int NbContacts, phonebook contacts[8])
 	counter = 0;
 	while (counter < NbContacts)
 	{
+		if (counter == 0)
+			std::cout << "index     |first name|last name |nickname" << std::endl;
 		std::cout
-		<< "Index: " << std::right << std::setw(10) << counter << std::endl
-		<< "First Name: " << std::right << std::setw(10) <<  format_str(contacts[counter]._first_name) <<	std::endl
-		<< "Last Name: " << std::right << std::setw(10) <<  format_str(contacts[counter]._last_name) <<	std::endl
-		<< "Nickname: " << std::right << std::setw(10) <<  format_str(contacts[counter]._nickname) <<	std::endl << std::endl;
+		<< std::right << std::setw(10) << counter << "|"
+		<< std::right << std::setw(10) <<  format_str(contacts[counter]._first_name) <<	"|"
+		<< std::right << std::setw(10) <<  format_str(contacts[counter]._last_name) <<	"|"
+		<< std::right << std::setw(10) <<  format_str(contacts[counter]._nickname) << std::endl;
 		counter++;
 	}
 	std::cout << "Input index of contact: " << std::endl;
