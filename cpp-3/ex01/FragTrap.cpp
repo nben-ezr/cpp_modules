@@ -6,7 +6,7 @@
 /*   By: nben-ezr <nben-ezr@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/25 21:40:22 by nben-ezr      #+#    #+#                 */
-/*   Updated: 2020/10/26 22:19:35 by nben-ezr      ########   odam.nl         */
+/*   Updated: 2020/11/09 02:11:44 by nben-ezr      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,33 @@ FragTrap::FragTrap(std::string name)
 FragTrap::~FragTrap()
 {
 	std::cout << "I'M DEAD I'M DEAD OHMYGOD I'M DEAD!" << std::endl;
+}
+
+FragTrap::FragTrap(const FragTrap &FragTrap_copy)
+{
+	this->_hitpoints = FragTrap_copy._hitpoints;
+	this->_max_hitpoints = FragTrap_copy._max_energy_points;
+	this->_energy_points = FragTrap_copy._energy_points;
+	this->_max_energy_points = FragTrap_copy._max_energy_points;
+	this->_level = FragTrap_copy._level;
+	this->_name = FragTrap_copy._name;
+	this->_melee_damage = FragTrap_copy._melee_damage;
+	this->_ranged_damage = FragTrap_copy._ranged_damage;
+	this->_armor_dmg_reduction = FragTrap_copy._armor_dmg_reduction;
+}
+
+FragTrap& FragTrap::operator = (const FragTrap FragTrap_copy)
+{
+	this->_hitpoints = FragTrap_copy._hitpoints;
+	this->_max_hitpoints = FragTrap_copy._max_energy_points;
+	this->_energy_points = FragTrap_copy._energy_points;
+	this->_max_energy_points = FragTrap_copy._max_energy_points;
+	this->_level = FragTrap_copy._level;
+	this->_name = FragTrap_copy._name;
+	this->_melee_damage = FragTrap_copy._melee_damage;
+	this->_ranged_damage = FragTrap_copy._ranged_damage;
+	this->_armor_dmg_reduction = FragTrap_copy._armor_dmg_reduction;
+	return (*this);
 }
 
 void FragTrap::rangedAttack(std::string const & target) const
@@ -126,4 +153,3 @@ void FragTrap::vaulthunter_dot_exe(std::string const & target)
 		this->_energy_points -= 25;
 	}
 }
-
