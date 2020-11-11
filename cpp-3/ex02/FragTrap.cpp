@@ -6,7 +6,7 @@
 /*   By: nben-ezr <nben-ezr@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/25 21:40:22 by nben-ezr      #+#    #+#                 */
-/*   Updated: 2020/11/10 13:44:30 by nben-ezr      ########   odam.nl         */
+/*   Updated: 2020/11/09 02:11:44 by nben-ezr      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -153,4 +153,3 @@ void FragTrap::vaulthunter_dot_exe(std::string const & target)
 		this->_energy_points -= 25;
 	}
 }
-

@@ -6,7 +6,7 @@
 /*   By: nben-ezr <nben-ezr@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/26 21:14:39 by nben-ezr      #+#    #+#                 */
-/*   Updated: 2020/11/10 13:43:30 by nben-ezr      ########   odam.nl         */
+/*   Updated: 2020/11/11 17:03:31 by nben-ezr      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,8 +117,7 @@ void ScavTrap::beRepaired(unsigned int amount)
 	}
 }
 
-
-void ScavTrap::challengeNewcomer(int challengeAmount) const
+void ScavTrap::challengeNewcomer(int challengeAmount)
 {
 	for(challengeAmount > 0; challengeAmount--;)
 	{
@@ -138,7 +137,7 @@ void ScavTrap::challengeNewcomer(int challengeAmount) const
 	}	
 }
 
-void ScavTrap::trivia(void) const
+void ScavTrap::trivia(void)
 {
 	std::string answer;
 	
@@ -155,7 +154,7 @@ void ScavTrap::trivia(void) const
 	
 }
 
-void ScavTrap::guess_number(void) const
+void ScavTrap::guess_number(void)
 {
 	int answer = rand() % 11;
 	int user_answer;

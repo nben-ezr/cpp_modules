@@ -1,45 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   FragTrap.hpp                                       :+:    :+:            */
+/*   ScavTrap.hpp                                       :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: nben-ezr <nben-ezr@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/10/25 21:40:27 by nben-ezr      #+#    #+#                 */
-/*   Updated: 2020/11/10 13:44:22 by nben-ezr      ########   odam.nl         */
+/*   Created: 2020/10/26 21:14:36 by nben-ezr      #+#    #+#                 */
+/*   Updated: 2020/11/10 13:22:40 by nben-ezr      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP_HPP
-# define FRAGTRAP_HPP
-# include <iostream>
-# include <cmath>
+#ifndef SCAVTRAP_HPP
+# define SCAVTRAP_HPP
+# include "ClapTrap.hpp"
 
-class FragTrap
+class ScavTrap : public ClapTrap
 {
 	public:
-		FragTrap();
-		FragTrap(std::string name);
-		~FragTrap();
-		FragTrap(const FragTrap &FragTrap_copy);
-		FragTrap& operator = (const FragTrap FragTrap_copy);
+		ScavTrap();
+		ScavTrap(std::string name);
+		~ScavTrap();
+		ScavTrap(const ScavTrap &ScavTrap);
+		ScavTrap& operator = (const ScavTrap ScavTrap_copy);
 		void rangedAttack(std::string const & target) const;
  		void meleeAttack(std::string const & target) const;
- 		void takeDamage(unsigned int amount);
+		void takeDamage(unsigned int amount);
 		void beRepaired(unsigned int amount);
-		void vaulthunter_dot_exe(std::string const & target);
-
-	private:
-		int			_hitpoints;
-		int			_max_hitpoints;
-		int			_energy_points;
-		int			_max_energy_points;
-		int			_level;
-		std::string	_name;
-		int			_melee_damage;
-		int			_ranged_damage;
-		int			_armor_dmg_reduction;
+		void challengeNewcomer(int challengeAmount);
+		void trivia(void);
+		void guess_number(void);
 };
-
 
 #endif

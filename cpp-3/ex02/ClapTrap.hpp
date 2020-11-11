@@ -1,44 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   FragTrap.hpp                                       :+:    :+:            */
+/*   ClapTrap.hpp                                       :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: nben-ezr <nben-ezr@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/10/25 21:40:27 by nben-ezr      #+#    #+#                 */
-/*   Updated: 2020/11/10 13:44:22 by nben-ezr      ########   odam.nl         */
+/*   Created: 2020/11/09 03:29:22 by nben-ezr      #+#    #+#                 */
+/*   Updated: 2020/11/11 23:10:46 by nben-ezr      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP_HPP
-# define FRAGTRAP_HPP
+#ifndef CLAPTRAP_HPP
+# define CLAPTRAP_HPP
 # include <iostream>
 # include <cmath>
 
-class FragTrap
+class ClapTrap
 {
 	public:
-		FragTrap();
-		FragTrap(std::string name);
-		~FragTrap();
-		FragTrap(const FragTrap &FragTrap_copy);
-		FragTrap& operator = (const FragTrap FragTrap_copy);
-		void rangedAttack(std::string const & target) const;
- 		void meleeAttack(std::string const & target) const;
- 		void takeDamage(unsigned int amount);
-		void beRepaired(unsigned int amount);
-		void vaulthunter_dot_exe(std::string const & target);
-
-	private:
+		ClapTrap();
+		ClapTrap(std::string name);
+		virtual ~ClapTrap();
+		ClapTrap(const ClapTrap &ClapTrap);
+		ClapTrap& operator = (const ClapTrap ClapTrap_copy);
+		virtual void rangedAttack(std::string const & target) const;
+ 		virtual void meleeAttack(std::string const & target) const;
+ 		virtual void takeDamage(unsigned int amount);
+		virtual void beRepaired(unsigned int amount);
+		
+	protected:
 		int			_hitpoints;
 		int			_max_hitpoints;
 		int			_energy_points;
 		int			_max_energy_points;
 		int			_level;
-		std::string	_name;
+		std::string _name;
 		int			_melee_damage;
 		int			_ranged_damage;
 		int			_armor_dmg_reduction;
+		int			*woo;
 };
 
 

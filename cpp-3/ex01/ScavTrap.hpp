@@ -6,7 +6,7 @@
 /*   By: nben-ezr <nben-ezr@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/26 21:14:36 by nben-ezr      #+#    #+#                 */
-/*   Updated: 2020/11/09 03:09:45 by nben-ezr      ########   odam.nl         */
+/*   Updated: 2020/11/10 13:43:44 by nben-ezr      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,11 @@ class ScavTrap : public FragTrap
 		ScavTrap& operator = (const ScavTrap ScavTrap_copy);
 		void rangedAttack(std::string const & target) const;
  		void meleeAttack(std::string const & target) const;
-		void challengeNewcomer(int challengeAmount);
-		void trivia(void);
-		void guess_number(void);
+		void takeDamage(unsigned int amount);
+		void beRepaired(unsigned int amount);
+		void challengeNewcomer(int challengeAmount) const;
+		void trivia(void) const;
+		void guess_number(void) const;
 };
 
 #endif
