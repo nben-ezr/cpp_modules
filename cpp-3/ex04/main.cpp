@@ -6,7 +6,7 @@
 /*   By: nben-ezr <nben-ezr@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/25 21:40:26 by nben-ezr      #+#    #+#                 */
-/*   Updated: 2020/11/12 00:45:36 by nben-ezr      ########   odam.nl         */
+/*   Updated: 2020/11/12 00:49:36 by nben-ezr      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ int		main(void)
 //	S1.NinjaShoebox(C1);
 //	S1.vaulthunter_dot_exe("Clown");
 //	std::cout << S1.getName() << std::endl;
+//	S1.meleeAttack("Pleb");
+//	S1.rangedAttack("Pleb");
 			
 	return (0);
 }

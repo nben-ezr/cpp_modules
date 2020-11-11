@@ -6,7 +6,7 @@
 /*   By: nben-ezr <nben-ezr@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/11 23:58:15 by nben-ezr      #+#    #+#                 */
-/*   Updated: 2020/11/12 00:45:17 by nben-ezr      ########   odam.nl         */
+/*   Updated: 2020/11/12 00:49:03 by nben-ezr      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ SuperTrap& SuperTrap::operator = (const SuperTrap SuperTrap_copy)
 
 void SuperTrap::rangedAttack(std::string const & target) const
 {
-	FragTrap::meleeAttack(target);
+	FragTrap::rangedAttack(target);
 }
 
 void SuperTrap::meleeAttack(std::string const & target) const
