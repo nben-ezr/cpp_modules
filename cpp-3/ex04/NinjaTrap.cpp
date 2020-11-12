@@ -6,7 +6,7 @@
 /*   By: nben-ezr <nben-ezr@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/11 23:20:53 by nben-ezr      #+#    #+#                 */
-/*   Updated: 2020/11/11 23:46:15 by nben-ezr      ########   odam.nl         */
+/*   Updated: 2020/11/12 22:53:57 by nben-ezr      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ NinjaTrap::NinjaTrap(const NinjaTrap &NinjaTrap_copy)
 	this->_armor_dmg_reduction = NinjaTrap_copy._armor_dmg_reduction;
 }
 
-NinjaTrap& NinjaTrap::operator = (const NinjaTrap NinjaTrap_copy)
+NinjaTrap& NinjaTrap::operator = (const NinjaTrap &NinjaTrap_copy)
 {
 	this->_hitpoints = NinjaTrap_copy._hitpoints;
 	this->_max_hitpoints = NinjaTrap_copy._max_energy_points;

@@ -6,7 +6,7 @@
 /*   By: nben-ezr <nben-ezr@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/11 23:19:28 by nben-ezr      #+#    #+#                 */
-/*   Updated: 2020/11/11 23:30:19 by nben-ezr      ########   odam.nl         */
+/*   Updated: 2020/11/12 22:55:15 by nben-ezr      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class NinjaTrap : public ClapTrap
 		NinjaTrap(std::string name);
 		~NinjaTrap();
 		NinjaTrap(const NinjaTrap &NinjaTrap);
-		NinjaTrap& operator = (const NinjaTrap NinjaTrap_copy);
+		NinjaTrap& operator = (const NinjaTrap &NinjaTrap_copy);
 		void NinjaShoebox(ClapTrap const &ClapTrap);
 		void NinjaShoebox(FragTrap const &ClapTrap);
 		void NinjaShoebox(ScavTrap const &ClapTrap);

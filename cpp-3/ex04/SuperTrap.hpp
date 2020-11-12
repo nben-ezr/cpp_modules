@@ -6,7 +6,7 @@
 /*   By: nben-ezr <nben-ezr@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/11 23:49:57 by nben-ezr      #+#    #+#                 */
-/*   Updated: 2020/11/11 23:52:05 by nben-ezr      ########   odam.nl         */
+/*   Updated: 2020/11/12 22:51:08 by nben-ezr      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class SuperTrap : public FragTrap, public NinjaTrap
 		SuperTrap(std::string name);
 		~SuperTrap();
 		SuperTrap(const SuperTrap &SuperTrap);
-		SuperTrap& operator = (const SuperTrap SuperTrap_copy);
+		SuperTrap& operator = (const SuperTrap &SuperTrap_copy);
 		void rangedAttack(std::string const & target) const;
  		void meleeAttack(std::string const & target) const;
 		void takeDamage(unsigned int amount);

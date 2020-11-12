@@ -6,7 +6,7 @@
 /*   By: nben-ezr <nben-ezr@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/25 21:40:27 by nben-ezr      #+#    #+#                 */
-/*   Updated: 2020/11/09 03:32:49 by nben-ezr      ########   odam.nl         */
+/*   Updated: 2020/11/12 22:55:53 by nben-ezr      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class FragTrap : public ClapTrap
 		FragTrap(std::string name);
 		~FragTrap();
 		FragTrap(const FragTrap &FragTrap);
-		FragTrap& operator = (const FragTrap FragTrap_copy);
+		FragTrap& operator = (const FragTrap &FragTrap_copy);
 		void rangedAttack(std::string const & target) const;
  		void meleeAttack(std::string const & target) const;
  		void takeDamage(unsigned int amount);

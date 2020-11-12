@@ -6,7 +6,7 @@
 /*   By: nben-ezr <nben-ezr@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/26 21:14:39 by nben-ezr      #+#    #+#                 */
-/*   Updated: 2020/11/11 17:03:31 by nben-ezr      ########   odam.nl         */
+/*   Updated: 2020/11/12 22:51:50 by nben-ezr      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ ScavTrap::ScavTrap(const ScavTrap &ScavTrap_copy)
 	this->_armor_dmg_reduction = ScavTrap_copy._armor_dmg_reduction;
 }
 
-ScavTrap& ScavTrap::operator = (const ScavTrap ScavTrap_copy)
+ScavTrap& ScavTrap::operator = (const ScavTrap &ScavTrap_copy)
 {
 	this->_hitpoints = ScavTrap_copy._hitpoints;
 	this->_max_hitpoints = ScavTrap_copy._max_energy_points;

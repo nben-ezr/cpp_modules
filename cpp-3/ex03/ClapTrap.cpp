@@ -6,7 +6,7 @@
 /*   By: nben-ezr <nben-ezr@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/09 03:29:32 by nben-ezr      #+#    #+#                 */
-/*   Updated: 2020/11/11 23:38:50 by nben-ezr      ########   odam.nl         */
+/*   Updated: 2020/11/12 22:54:42 by nben-ezr      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ ClapTrap::ClapTrap(const ClapTrap &ClapTrap_copy)
 	this->_armor_dmg_reduction = ClapTrap_copy._armor_dmg_reduction;
 }
 
-ClapTrap& ClapTrap::operator = (const ClapTrap ClapTrap_copy)
+ClapTrap& ClapTrap::operator = (const ClapTrap &ClapTrap_copy)
 {
 	this->_hitpoints = ClapTrap_copy._hitpoints;
 	this->_max_hitpoints = ClapTrap_copy._max_energy_points;

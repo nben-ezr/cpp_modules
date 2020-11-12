@@ -6,7 +6,7 @@
 /*   By: nben-ezr <nben-ezr@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/09 03:29:22 by nben-ezr      #+#    #+#                 */
-/*   Updated: 2020/11/12 00:40:12 by nben-ezr      ########   odam.nl         */
+/*   Updated: 2020/11/12 22:54:18 by nben-ezr      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class ClapTrap
 		ClapTrap(std::string name);
 		virtual ~ClapTrap();
 		ClapTrap(const ClapTrap &ClapTrap);
-		ClapTrap& operator = (const ClapTrap ClapTrap_copy);
+		ClapTrap& operator = (const ClapTrap &ClapTrap_copy);
 		std::string getName(void) const;
 		virtual void rangedAttack(std::string const & target) const;
  		virtual void meleeAttack(std::string const & target) const;

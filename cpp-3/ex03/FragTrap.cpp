@@ -6,7 +6,7 @@
 /*   By: nben-ezr <nben-ezr@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/25 21:40:22 by nben-ezr      #+#    #+#                 */
-/*   Updated: 2020/11/09 02:11:44 by nben-ezr      ########   odam.nl         */
+/*   Updated: 2020/11/12 22:54:52 by nben-ezr      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ FragTrap::FragTrap(const FragTrap &FragTrap_copy)
 	this->_armor_dmg_reduction = FragTrap_copy._armor_dmg_reduction;
 }
 
-FragTrap& FragTrap::operator = (const FragTrap FragTrap_copy)
+FragTrap& FragTrap::operator = (const FragTrap &FragTrap_copy)
 {
 	this->_hitpoints = FragTrap_copy._hitpoints;
 	this->_max_hitpoints = FragTrap_copy._max_energy_points;

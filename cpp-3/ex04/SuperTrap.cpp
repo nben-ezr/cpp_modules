@@ -6,7 +6,7 @@
 /*   By: nben-ezr <nben-ezr@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/11 23:58:15 by nben-ezr      #+#    #+#                 */
-/*   Updated: 2020/11/12 00:49:03 by nben-ezr      ########   odam.nl         */
+/*   Updated: 2020/11/12 22:51:22 by nben-ezr      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ SuperTrap::SuperTrap(const SuperTrap &SuperTrap_copy)
 	this->_armor_dmg_reduction = SuperTrap_copy._armor_dmg_reduction;
 }
 
-SuperTrap& SuperTrap::operator = (const SuperTrap SuperTrap_copy)
+SuperTrap& SuperTrap::operator = (const SuperTrap &SuperTrap_copy)
 {
 	this->_hitpoints = SuperTrap_copy._hitpoints;
 	this->_max_hitpoints = SuperTrap_copy._max_energy_points;
