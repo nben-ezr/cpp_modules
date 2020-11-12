@@ -6,7 +6,7 @@
 /*   By: nben-ezr <nben-ezr@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/12 17:30:32 by nben-ezr      #+#    #+#                 */
-/*   Updated: 2020/11/12 22:01:04 by nben-ezr      ########   odam.nl         */
+/*   Updated: 2020/11/12 22:50:03 by nben-ezr      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ Sorcerer::~Sorcerer()
 	std::cout << _name << ", " << _title << ", is dead. Consequences will never be the same!" << std::endl;
 }
 
-Sorcerer& Sorcerer::operator = (const Sorcerer source)
+Sorcerer& Sorcerer::operator = (const Sorcerer &source)
 {
 	this->_name = source._name;
 	this->_title = source._title;

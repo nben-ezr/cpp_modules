@@ -6,7 +6,7 @@
 /*   By: nben-ezr <nben-ezr@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/12 21:33:29 by nben-ezr      #+#    #+#                 */
-/*   Updated: 2020/11/12 22:01:29 by nben-ezr      ########   odam.nl         */
+/*   Updated: 2020/11/12 22:49:52 by nben-ezr      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ Serf::~Serf()
 	std::cout << "Woooooooooo" << std::endl;
 }
 
-Serf& Serf::operator = (const Serf source)
+Serf& Serf::operator = (const Serf &source)
 {
 	this->_name = source._name;
 	return (*this);

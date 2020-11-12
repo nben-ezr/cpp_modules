@@ -6,7 +6,7 @@
 /*   By: nben-ezr <nben-ezr@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/12 17:30:28 by nben-ezr      #+#    #+#                 */
-/*   Updated: 2020/11/12 22:02:01 by nben-ezr      ########   odam.nl         */
+/*   Updated: 2020/11/12 22:49:43 by nben-ezr      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ Peon::~Peon()
 	std::cout << "Bleuark..." << std::endl;
 }
 
-Peon& Peon::operator = (const Peon source)
+Peon& Peon::operator = (const Peon &source)
 {
 	this->_name = source._name;
 	return (*this);

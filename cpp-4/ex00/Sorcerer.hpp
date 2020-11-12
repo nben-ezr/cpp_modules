@@ -6,7 +6,7 @@
 /*   By: nben-ezr <nben-ezr@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/12 17:30:35 by nben-ezr      #+#    #+#                 */
-/*   Updated: 2020/11/12 19:00:50 by nben-ezr      ########   odam.nl         */
+/*   Updated: 2020/11/12 22:50:07 by nben-ezr      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class Sorcerer
 		Sorcerer();
 		Sorcerer(std::string name, std::string title);
 		Sorcerer(const Sorcerer& Sorcerer);
-		Sorcerer& operator = (const Sorcerer source);
+		Sorcerer& operator = (const Sorcerer &source);
 		~Sorcerer();
 		std::string getName() const;
 		std::string getTitle() const;

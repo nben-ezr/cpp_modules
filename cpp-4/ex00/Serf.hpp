@@ -6,7 +6,7 @@
 /*   By: nben-ezr <nben-ezr@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/12 21:33:26 by nben-ezr      #+#    #+#                 */
-/*   Updated: 2020/11/12 21:34:21 by nben-ezr      ########   odam.nl         */
+/*   Updated: 2020/11/12 22:49:55 by nben-ezr      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class Serf : public Victim
 		Serf(){};
 		Serf(std::string name);
 		Serf(const Serf& Serf);
-		Serf& operator = (const Serf source);
+		Serf& operator = (const Serf &source);
 		~Serf();
 		void getPolymorphed() const;
 };
