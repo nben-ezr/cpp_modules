@@ -6,7 +6,7 @@
 /*   By: nben-ezr <nben-ezr@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/12 17:30:28 by nben-ezr      #+#    #+#                 */
-/*   Updated: 2020/11/12 19:02:22 by nben-ezr      ########   odam.nl         */
+/*   Updated: 2020/11/12 22:02:01 by nben-ezr      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,23 @@ Peon::Peon(std::string name) : Victim(name)
 	std::cout << "Zog zog." << std::endl;
 }
 
+Peon::Peon(Peon const &other) : Victim(other._name)
+{
+	this->_name = other._name;
+	std::cout << "Zog zog." << std::endl;
+}
+
 Peon::~Peon()
 {
 	std::cout << "Bleuark..." << std::endl;
 }
+
+Peon& Peon::operator = (const Peon source)
+{
+	this->_name = source._name;
+	return (*this);
+}
+
 
 void Peon::getPolymorphed() const
 {
